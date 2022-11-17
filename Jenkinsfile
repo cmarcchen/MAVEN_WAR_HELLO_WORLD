@@ -11,6 +11,8 @@ pipeline{
         stage('SCM'){
             steps{
                 echo "Branch is: ${env.BRANCH_NAME}"
+                echo "Git branch is: ${env.GIT_BRANCH}"
+                echo "Git local branch is: ${env.GIT_LOCAL_BRANCH}"
                 git credentialsId: 'github', 
                     url: 'https://github.com/cmarcchen/MAVEN_WAR_HELLO_WORLD.git'
             }
