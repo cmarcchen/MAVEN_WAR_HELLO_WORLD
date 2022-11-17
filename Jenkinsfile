@@ -9,6 +9,7 @@ pipeline{
     stages{
         stage('SCM'){
             steps{
+                echo "Branch is: ${env.BRANCH_NAME}"
                 git credentialsId: 'github', 
                     url: 'https://github.com/cmarcchen/MAVEN_WAR_HELLO_WORLD.git'
             }
