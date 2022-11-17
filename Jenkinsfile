@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('SCM'){
             steps{
-                git credentialsId: 'none', 
+                git credentialsId: 'github', 
                     url: 'https://github.com/cmarcchen/MAVEN_WAR_HELLO_WORLD.git'
             }
         }
