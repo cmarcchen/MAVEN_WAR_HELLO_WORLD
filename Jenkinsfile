@@ -26,7 +26,7 @@ pipeline{
         
         stage('Docker Build'){
             steps{
-                sh "docker build . -t ecpmarc/hello-world:${DOCKER_TAG} "
+                sh "docker build . -t hello-world:${DOCKER_TAG} "
             }
         }
         
