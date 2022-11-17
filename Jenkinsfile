@@ -20,7 +20,7 @@ pipeline{
         
         stage('Maven Build'){
             steps{
-                sh "mvn clean package"
+                sh "mvn -DskipTests clean package"
             }
         }
         
