@@ -5,7 +5,7 @@ pipeline{
     }
     environment {
       DOCKER_TAG = getVersion()
-      BRANCH_NAME = "master"
+      BRANCH_NAME = "main"
     }
     stages{
         stage('SCM'){
