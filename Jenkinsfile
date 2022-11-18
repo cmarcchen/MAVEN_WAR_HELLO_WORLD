@@ -32,9 +32,9 @@ pipeline{
         
         stage('DockerHub Push'){
             steps{
-                // withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'dockerHubUser', passwordVariable: 'dockerHubPwd')]) {
-                //     sh "docker login -u ${dockerHubUser} -p ${dockerHubPwd}"
-                // }
+                withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'dockerHubUser', passwordVariable: 'dockerHubPwd')]) {
+                    sh "docker login -u ${dockerHubUser} -p ${dockerHubPwd}"
+                }
                 
                 sh "docker push ecpmarc/hello-world:${DOCKER_TAG} "
             }
