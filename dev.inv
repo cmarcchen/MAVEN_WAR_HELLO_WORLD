@@ -1,2 +1,2 @@
 [dev]
-10.211.55.4 ansible_user=parallels
+172.20.10.8 ansible_user=parallels
