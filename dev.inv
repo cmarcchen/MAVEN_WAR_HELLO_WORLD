@@ -1,2 +1,2 @@
 [dev]
-172.31.34.192 ansible_user=root
+10.211.55.4 ansible_user=parallels
